@@ -3,7 +3,14 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  font-size: 16px;
   padding: 20px;
   border-bottom: 1px solid grey;
+}
+.anchor {
+  font-size: 16px;
+  transition: 0.3s;
+  padding: 5px;
+}
+.anchor:hover {
+  text-decoration: underline;
 }
