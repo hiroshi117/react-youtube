@@ -1,4 +1,4 @@
-import styles from "../components/Flexbox.module.css";
+import styles from "./Flexbox.module.css";
 
 const ITEMS = [
   { href: "https://x.com/", title: "X", description: "Xだよ" },
