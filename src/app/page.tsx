@@ -7,7 +7,7 @@ import { useCallback } from "react";
 export default function Home() {
   const foo = 1;
 
-  const handleClick = useCallback((e) => {
+  const handleClick = useCallback((e: MouseEvent<HTMLAnchorElement>) => {
     console.log(e.target.href);
     e.preventDefault();
     alert(foo);
