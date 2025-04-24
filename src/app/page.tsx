@@ -5,15 +5,15 @@ import Flexbox from "../components/Flexbox";
 import styles from "./page.module.css";
 import { useCallback } from "react"; // React は型で使うので import は不要でもOK
 
-const foo = 1;
-
-const handleClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
-  e.preventDefault();
-  console.log(e.currentTarget.href);
-  alert(foo);
-}, []);
-
 export default function Home() {
+  const foo = 1;
+
+  const handleClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    console.log(e.currentTarget.href);
+    alert(foo);
+  }, []);
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
