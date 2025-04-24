@@ -18,7 +18,7 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <a href="/about" onClick={handleClick}>
-          ボタン
+          button
         </a>
         <Image
           className={styles.logo}
