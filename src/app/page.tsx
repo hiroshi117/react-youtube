@@ -3,22 +3,29 @@
 import Image from "next/image";
 import Flexbox from "../components/Flexbox";
 import styles from "./page.module.css";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  // const foo = 1;
+  const [count, setCount] = useState(1);
 
-  // const handleClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
-  //   e.preventDefault();
-  //   console.log(e.currentTarget.href);
-  //   alert(foo);
-  // }, []);
+  const handleClick = (e) => {
+    setCount((count) => count + 1);
+    setCount((count) => count + 1);
+  };
+
+  useEffect(() => {
+    document.body.style.backgroundColor = "lightblue";
+
+    return () => {
+      document.body.style.backgroundColor = "";
+    };
+  }, []);
 
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        {/* <a href="/about" onClick={handleClick}>
-          button
-        </a> */}
+        <h1>{count}</h1>
+        <button onClick={handleClick}>ボタン</button>
         <Image
           className={styles.logo}
           src="/next.svg"
