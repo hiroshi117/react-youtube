@@ -3,15 +3,17 @@
 import Image from "next/image";
 import Flexbox from "../components/Flexbox";
 import styles from "./page.module.css";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function Home() {
   const [count, setCount] = useState(1);
 
-  const handleClick = () => {
-    setCount((count) => count + 1);
-    setCount((count) => count + 1);
-  };
+  const handleClick = useCallback(() => {
+    console.log(count);
+    if (count < 10) {
+      setCount((count) => count + 1);
+    }
+  }, [count]);
 
   useEffect(() => {
     document.body.style.backgroundColor = "lightblue";
