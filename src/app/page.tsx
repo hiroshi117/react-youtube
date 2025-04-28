@@ -25,12 +25,9 @@ export default function Home() {
     setText(e.target.value.trim());
   }, []);
 
-  const handleDisplay = useCallback(
-    (_e: React.MouseEvent<HTMLButtonElement>) => {
-      setIsShow((isShow) => !isShow);
-    },
-    []
-  );
+  const handleDisplay = useCallback(() => {
+    setIsShow((isShow) => !isShow);
+  }, []);
 
   useEffect(() => {
     document.body.style.backgroundColor = "lightblue";
