@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
 
   const handleDisplay = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
+    (_e: React.MouseEvent<HTMLButtonElement>) => {
       setIsShow((isShow) => !isShow);
     },
     []
