@@ -5,12 +5,12 @@ import Flexbox from "../components/Flexbox";
 import styles from "./page.module.css";
 import { useCounter } from "@/hooks/useCounter";
 import { useInputArray } from "@/hooks/useInputArray";
-import { useBgLightBlue } from "@/hooks/useBgLightBlue";
+import { useBgColor } from "@/hooks/useBgColor";
 
 export default function Home() {
   const { count, isShow, handleClick, handleDisplay } = useCounter();
   const { text, array, handleChange, handleAdd } = useInputArray();
-  useBgLightBlue();
+  useBgColor();
 
   return (
     <div className={styles.page}>
