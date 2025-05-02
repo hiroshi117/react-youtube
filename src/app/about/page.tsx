@@ -6,8 +6,7 @@ import { useInputArray } from "@/hooks/useInputArray";
 import { useBgLightBlue } from "@/hooks/useBgLightBlue";
 
 export default function AboutPage() {
-  const { count, doubleCount, isShow, handleClick, handleDisplay } =
-    useCounter();
+  const { doubleCount, isShow, handleClick, handleDisplay } = useCounter();
   const { text, array, handleChange, handleAdd } = useInputArray();
   useBgLightBlue();
 
